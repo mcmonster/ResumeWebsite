@@ -1,0 +1,30 @@
+2012-07-07 23:27:13 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+#0 /var/www/lib/Cake/Model/Model.php(3180): Model->setSource('posts')
+#1 /var/www/lib/Cake/Model/Model.php(2631): Model->getDataSource()
+#2 /var/www/app/Controller/PostsController.php(6): Model->find('all')
+#3 [internal function]: PostsController->index()
+#4 /var/www/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#5 /var/www/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-07-07 23:27:21 Error: [MissingControllerException] Controller class ProjectController could not be found.
+#0 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-07-08 00:00:20 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+#0 /var/www/lib/Cake/Model/Model.php(3180): Model->setSource('posts')
+#1 /var/www/lib/Cake/Model/Model.php(2631): Model->getDataSource()
+#2 /var/www/app/Controller/PostsController.php(6): Model->find('all')
+#3 [internal function]: PostsController->index()
+#4 /var/www/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#5 /var/www/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-07-08 01:34:48 Error: [MissingViewException] View file "/var/www/app/View/Projects/view.ctp" is missing.
+#0 /var/www/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(ProjectsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
