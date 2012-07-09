@@ -1,8 +1,9 @@
 <?php
 class ProjectsController extends AppController {
-	public $helpers = array('Html', 'Form');
+	public $helpers = array('Html', 'Form', 'Time');
 
 	public function index() {
+		$this->Project->recursive = 2;
 		$this->set('projects', $this->Project->find('all'));
 	}
 

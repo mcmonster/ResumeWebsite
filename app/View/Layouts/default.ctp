@@ -29,7 +29,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+		// Load the layout stylings
+		//echo $this->Html->css('cake.generic');
+
+		// Load the controller specific stylings
+		echo $this->Html->css($this->params['controller']);
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
