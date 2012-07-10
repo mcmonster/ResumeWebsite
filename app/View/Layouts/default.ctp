@@ -22,15 +22,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
+	<title>R. Matt McCann</title>
 	<?php
 		echo $this->Html->meta('icon');
 
 		// Load the layout stylings
-		//echo $this->Html->css('cake.generic');
+		echo $this->Html->css('default');
 
 		// Load the controller specific stylings
 		echo $this->Html->css($this->params['controller']);
@@ -43,12 +40,41 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			&nbsp;
+		</div>
+		<div id="menu">
+			<?php 
+				echo $this->Html->link('Home', array('controller' => 'profiles',
+																 'action' => 'welcome'),
+														 array('class' => 'default_menu'));
+				echo '<br />';
+				echo $this->Html->link('Education', array('controller' => 'educations',
+																		'action' => 'index'),
+																array('class' => 'default_menu'));
+				echo '<br />';
+				echo $this->Html->link('Work', array('controller' => 'jobs',
+																 'action' => 'index'),
+														 array('class' => 'default_menu'));
+				echo '<br />';
+				echo $this->Html->link('Projects', array('controller' => 'projects',
+																	  'action' => 'index'),
+															  array('class' => 'default_menu'));
+				echo '<br />';
+				echo $this->Html->link('Skills', array('controller' => 'skills',
+																   'action' => 'index'),
+															array('class' => 'default_menu'));
+				echo '<br />';
+				echo $this->Html->link('References', array('controller' => 'references',
+																		 'action' => 'index'),
+																 array('class' => 'default_menu'));
+				echo '<br />';
+				echo $this->Html->link('Contact', array('controller' => 'profiles',
+																	 'action' => 'contact'),
+															 array('class' => 'default_menu'));
+			?>
 		</div>
 		<div id="content">
-
 			<?php echo $this->Session->flash(); ?>
-
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
@@ -60,6 +86,5 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			?>
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>

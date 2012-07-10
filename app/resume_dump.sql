@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 09, 2012 at 04:31 PM
+-- Generation Time: Jul 10, 2012 at 06:15 PM
 -- Server version: 5.5.24
 -- PHP Version: 5.3.10-1ubuntu3.2
 
@@ -19,6 +19,51 @@ SET time_zone = "+00:00";
 --
 -- Database: `resume`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `educations`
+--
+
+CREATE TABLE IF NOT EXISTS `educations` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `school_name` varchar(50) DEFAULT NULL,
+  `degree` varchar(50) DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
+  `focus` varchar(50) DEFAULT NULL,
+  `gpa` decimal(10,2) DEFAULT NULL,
+  `max_gpa` decimal(10,2) DEFAULT NULL,
+  `summary` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `educations`
+--
+
+INSERT INTO `educations` (`id`, `school_name`, `degree`, `start_date`, `end_date`, `focus`, `gpa`, `max_gpa`, `summary`) VALUES
+(1, 'The Ohio State University', 'B.S. Computer Science & Engineering', '2007-09-17', '2012-06-08', 'High Performance Computing', 3.00, 4.00, NULL),
+(2, 'Cisco NetAcademy', 'Technical Certification', '2004-09-06', '2007-06-08', 'Networking', 3.40, 4.00, NULL),
+(3, 'Springboro High School', 'Technical Honors Diploma', '2003-09-01', '2007-07-06', 'N/a', 3.40, 4.00, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jobs`
+--
+
+CREATE TABLE IF NOT EXISTS `jobs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `employer` varchar(50) NOT NULL,
+  `location` varchar(50) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  `summary` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

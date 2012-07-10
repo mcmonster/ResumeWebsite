@@ -1,8 +1,7 @@
-<h1>Projects</h1>
 <!--Loop through each project and display it-->
 <?php foreach($projects as $project): ?>
 	<div class='summary'>
-		<table>
+		<table class='project'>
 			<tr>
 				<td class="project" colspan="2">
 					<h1 class="project">
@@ -33,18 +32,20 @@
 				</td>
 				<td class="project" align="right">
 					<?php
-						echo $this->Time->niceShort($project['Project']['start_date']).' - ';
+						echo date("M Y", $this->Time->toUnix($project['Project']['start_date']));
+						echo ' - ';
 						if ($project['Project']['end_date']) {
-							echo $this->Time->niceShort($project['Project']['end_date']);
+							echo date("M Y", $this->Time->toUnix($project['Project']['end_date']));
 						} else {
 							echo 'Present';
 						}
-					?><br />
+					?>
 				</td>
 			</tr>
 			<tr>
 				<td class="project" colspan="2">
-					<p>
+					<h2 class="project">Summary</h2>
+					<p class="project">
 						<?php echo $project['Project']['summary'];  ?>
 					</p>
 				</td>
