@@ -3,7 +3,7 @@ class RecommendationsController extends AppController {
 	public $helpers = array('Html');
 
 	function download($fileName) {
-		$this->view = 'Media';
+		$this->viewClass = 'Media';
 		$params = array(
 			'id' => $fileName.'.pdf',
 			'name' => $fileName,
