@@ -26,11 +26,7 @@
 		</div>
 		<div id="menu">
 			<div id="menu_link">
-				<?php 
-					echo $this->Html->link('Home', array('controler' => 'profiles',
-																	 'action' => 'welcome'),
-															 array('class' => 'menu_link')); 
-				?>
+				<a href="/" class="menu_link">Home</a>
 			</div>
 			<div id="menu_link">
 				<?php
@@ -62,7 +58,7 @@
 			</div>
 			<div id='menu_link'>
 				<?php
-					echo $this->Html->link('References', array('controller' => 'references',
+					echo $this->Html->link('References', array('controller' => 'recommendations',
 																			 'action' => 'index'),
 																	 array('class' => 'menu_link'));
 				?>
@@ -80,12 +76,6 @@
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
 		</div>
 	</div>
 </body>

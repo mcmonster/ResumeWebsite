@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 11, 2012 at 08:49 PM
+-- Generation Time: Jul 12, 2012 at 01:22 PM
 -- Server version: 5.5.24
 -- PHP Version: 5.3.10-1ubuntu3.2
 
@@ -166,6 +166,15 @@ CREATE TABLE IF NOT EXISTS `recommendations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
   `job_id` int(11) DEFAULT NULL,
+  `enabled` tinyint(1) NOT NULL DEFAULT '1',
+  `street` varchar(100) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `state` varchar(2) NOT NULL,
+  `zipcode` int(5) NOT NULL,
+  `phone` varchar(17) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `relation` varchar(50) NOT NULL,
+  `file` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `job_id` (`job_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
@@ -174,12 +183,12 @@ CREATE TABLE IF NOT EXISTS `recommendations` (
 -- Dumping data for table `recommendations`
 --
 
-INSERT INTO `recommendations` (`id`, `name`, `job_id`) VALUES
-(1, 'Delwyn Moller', 1),
-(2, 'Konstantinos Andreadis', 2),
-(3, 'John Fulton', 3),
-(4, 'Dr. Gregory Caldiera', 4),
-(5, 'Dale Ditmer', 5);
+INSERT INTO `recommendations` (`id`, `name`, `job_id`, `enabled`, `street`, `city`, `state`, `zipcode`, `phone`, `email`, `relation`, `file`) VALUES
+(1, 'Dr. Delwyn Moller', 1, 1, 'PO Box 1386', 'Sierra Madre', 'CA', 91025, '+1 (626) 921.5212', 'dkmoller@remotesensingsolutions.com', 'Supervisor', 'MollerRecommendation.pdf'),
+(2, 'Dr. Konstantinos Andreadis', 2, 1, '4800 Oak Grove Drive', 'Pasadena', 'CA', 91109, '+1 (818) 354-4478', 'kandread@jpl.nasa.gov', 'Supervisor', 'AndreadisRecommendation'),
+(3, 'John Fulton', 3, 1, '21240 Burbank Boulevard', 'Woodland Hills', 'CA', 91367, '+1 (410) 765.6445', 'John.Fulton@ngc.com', 'Supervisor', ''),
+(4, 'Dr. Gregory Caldiera', 4, 0, '', '', '', 0, '', '', '', ''),
+(5, 'Dale Ditmer', 5, 0, '', '', '', 0, '', '', '', '');
 
 -- --------------------------------------------------------
 
