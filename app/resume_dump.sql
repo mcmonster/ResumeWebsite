@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 10, 2012 at 06:15 PM
+-- Generation Time: Jul 11, 2012 at 08:49 PM
 -- Server version: 5.5.24
 -- PHP Version: 5.3.10-1ubuntu3.2
 
@@ -63,7 +63,18 @@ CREATE TABLE IF NOT EXISTS `jobs` (
   `end_date` date NOT NULL,
   `summary` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `jobs`
+--
+
+INSERT INTO `jobs` (`id`, `employer`, `location`, `title`, `start_date`, `end_date`, `summary`) VALUES
+(1, 'NASA Jet Propulsion Laboratory', 'Pasadena, CA', 'Visiting Researcher', '2011-07-01', '2012-05-18', '<li>Improved and enhanced the Surface Water & Ocean Topography satellite simulator</li><li>Developed high-throughput parallelization using MPI</li><li>Integrated automated testing framework</li><li>Garnered experience debugging very large data sets using Python</li>'),
+(2, 'The Ohio State University', 'Columbus, OH', 'Undergraduate Researcher', '2010-07-09', '2011-06-03', '<li>Developed genetic programming algorithm for deriving 3D data from 2D satellite date</li><li>Analyzed research data using Python i.e. pylabs</li><li>Improved existing software performance using Cython/C++</li>'),
+(3, 'Northrop Grumman Corporation', 'Baltimore, MD', 'Engineering Co-op', '2009-01-01', '2010-04-01', '<li>Deployed and administrated Linux laboratory environment</li><li>Translated customer requirements into UML design documents</li><li>Presented software designs to customer and upper management</li><li>Designed and coded cryptographic modules extending Public-Key Cryptography Standard #11 and Mozilla''s Network Security Services using C/C++</li><li>Developed and improved software process model</li><li>Mined organization and project performance data using SQL/VBA</li><li>Developed statistical data analysis and modeling system using VBA</li>'),
+(4, 'The Ohio State University', 'Columbus, OH', 'Web Developer', '2008-05-01', '2008-07-01', '<li>Created professor''s web portal leveraging AJAX for dynamic content</li>'),
+(5, 'Dalco Electronics', 'Springboro, OH', 'Service Technician', '2007-06-01', '2008-12-01', '<li>Assembled and deployed enterprise servers</li><li>Debugged and repaired personal computers</li><li>Installed medium-sized business networks</li>');
 
 -- --------------------------------------------------------
 
@@ -148,6 +159,31 @@ INSERT INTO `project_skills` (`id`, `project_id`, `skill_id`, `isPrimary`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `recommendations`
+--
+
+CREATE TABLE IF NOT EXISTS `recommendations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `job_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `job_id` (`job_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `recommendations`
+--
+
+INSERT INTO `recommendations` (`id`, `name`, `job_id`) VALUES
+(1, 'Delwyn Moller', 1),
+(2, 'Konstantinos Andreadis', 2),
+(3, 'John Fulton', 3),
+(4, 'Dr. Gregory Caldiera', 4),
+(5, 'Dale Ditmer', 5);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `skills`
 --
 
@@ -209,6 +245,16 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `created`, `modified`) VALUES
 (1, 'matt', '93b0e68f8202db26fa1fa634cc8d5f63dbbaae74', 'employer', '2012-07-08 17:44:16', '2012-07-08 17:47:59');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `recommendations`
+--
+ALTER TABLE `recommendations`
+  ADD CONSTRAINT `recommendations_ibfk_1` FOREIGN KEY (`job_id`) REFERENCES `jobs` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

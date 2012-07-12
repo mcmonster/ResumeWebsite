@@ -1,4 +1,4 @@
-a.project {
+a.job {
 	/* Font/Text Settings */
 	color:						#008000;
 	text-decoration:			none;
@@ -17,6 +17,7 @@ div.summary {
 
 	/* Border Settings */
 	border:							1px solid #bbb;
+	border-left:					0px;
 	border-radius:					4px;
 	border-top-left-radius:		0px;
 	border-bottom-left-radius:	0px;
@@ -36,7 +37,7 @@ div.summary {
 	width:						600px;
 }
 
-h1.project {
+h1.job {
 	/* Font/Text Settings */
 	color:						#008000;
 	font-size:					25px;
@@ -47,7 +48,7 @@ h1.project {
 	margin-top:					0px;
 }
 
-h2.project {
+h2.job {
 	/* Font/Text Settings */
 	color:						#000000;
 	font-size:					15px;
@@ -56,11 +57,11 @@ h2.project {
 	margin-top:					0px;
 }
 
-p.project {
+p.job {
 	margin-top:					0px;
 }
 
-ul.project {
+ul.job {
 	font-size:					15px;
 
 	margin-bottom:				5px;
@@ -69,10 +70,10 @@ ul.project {
 	padding-left:				15px;
 }
 
-table.project {
+table.job {
 	width:						100%;
 }
 
-td.project {
+td.job {
 	vertical-align:			top;
 }
