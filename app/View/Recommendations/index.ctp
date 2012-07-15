@@ -49,6 +49,14 @@
 					?>
 				</td>
 			</tr>
+			<tr>
+				<td class="recommend" colspan="2">
+					<h2 class="recommend">Excerpt</h2>
+					<i>
+						...<?php echo $recommendation['Recommendation']['summary'] ?>...
+					</i>
+				</td>
+			</tr>
 		</table>
 	</div>
 <?php endforeach; ?>
