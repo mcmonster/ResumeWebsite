@@ -8,11 +8,18 @@ a.menu_link {
 body {
 	border:					0px solid black;
 
+	/* Background Settings */
+
+	/* Size Settings */
 	height					100%;
 	min-height:				100%;
 
+	/* Position Settings */
 	margin:					0 0 0 0;
 	padding-bottom:		0px;
+
+	/* Font Settings */
+	font-family:			Arial;
 }
 
 canvas#anchor_canvas {
@@ -23,7 +30,7 @@ div#anchor {
 	/* Position Settings */
 	float:					right;
 	margin-right:			-50px;
-	margin-top:				50px;
+	margin-top:				40px;
 }
 
 div#anchor_line_top_left {
@@ -47,7 +54,7 @@ div#anchor_name {
 
 	/* Position Settings */
 	margin-left:			60px;
-	margin-top:				-25px;
+	margin-top:				-30px;
 	padding-bottom:		0px;
 	padding-top:			0px;
 }
@@ -66,9 +73,26 @@ div#container {
 div#content {
 	border-left:			1px solid black;
 
+	/* Position Settings */
 	float:					left;
+	padding-bottom:		20px;
+	padding-left:			0px;
+	padding-right:			0px;
+	padding-top:			40px;
 
-	padding-top:			50px;
+	min-height:				auto;
+	width:					625px;
+}
+
+div#gradient {
+	background-image:    -moz-radial-gradient(circle cover, #ffffff, #00ee00);
+
+	height:					100%;
+	min-height:				100%;
+	width:					100%;
+
+	margin:					0 0 0 0;
+	padding:					0 0 0 0;
 }
 
 div#header {
@@ -78,7 +102,12 @@ div#header {
 }
 
 div#footer {
+	/* Position Settings */
 	clear:					both;
+	padding-top:			10px;
+
+	font-size:				12px;
+	text-align:				center;
 }
 
 div#menu {
@@ -131,9 +160,13 @@ div.menu_link {
 	text-align:							left;
 }
 
+span.anchor_capital {
+	font-size:							50px;
+}
+
 h1.anchor_name {
 	/* Font Settings */
-	color:								red;
+	color:								black;
 	font-size:							40px;
 
 	/* Position Settings */
@@ -146,8 +179,8 @@ h1.anchor_name {
 html {
 	border:								0px solid black;
 
-	height:					100%;
+	height:								100%;
 
-	margin:					0 0 0 0;
-	padding:					0 0 0 0;
+	margin:								0 0 0 0;
+	padding:								0 0 0 0;
 }

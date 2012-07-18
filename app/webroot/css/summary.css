@@ -1,0 +1,79 @@
+a.summary {
+	/* Font/Text Settings */
+	color:								#008000;
+	text-decoration:					none;
+}
+
+h1.summary {
+	/* Font/Text Settings */
+	color:								#008000;
+	font-size:							25px;
+
+	/* Position Settings */
+	margin-bottom:						0px;
+	margin-left:						0px;
+	margin-right:						0px;
+	margin-top:							2px;
+}
+
+h2.summary {
+	/* Font/Text Settings */
+	color:								#000000;
+	font-size:							15px;
+
+	/* Position Settings */
+	margin-bottom:						0px;
+	margin-top:							0px;
+}
+
+p.summary {
+	/* Position Settings */
+	margin-bottom:						0px;
+	margin-top:							0px;
+}
+
+ul.summary {
+	/* Font/Text Settings */
+	font-size:							15px;
+
+	/* Position Settings */
+	margin-bottom:						5px;
+	margin-left:						0px;
+	margin-right:						0px;
+	margin-top:							0px;
+	padding-left:						15px;
+}
+
+table.summary {
+	border:								0px solid black;
+
+	margin-left:						-3px;
+	margin-right:						-3px;
+	padding-left:						0px;
+	padding-right:						0px;
+
+	/* Size Settings */
+	width:								100%;
+}
+
+td.summary {
+	padding-left:						10px;
+
+	vertical-align:					top;
+}
+
+td.divider {
+	border-bottom:						1px solid black;
+	height:								1px;
+
+	margin-left:						-10px;
+	padding-left:						0px;
+	padding-top:						5px;
+}
+
+tr.divider {
+	border:								1px solid black;
+
+	margin-left:						-1px;
+	padding-left:						0px;
+}

@@ -40,6 +40,11 @@ function drawAnchor() {
 	ctx.strokeStyle = "black";
 	ctx.fill();
 	ctx.stroke();
+
+	// Draw the R
+	ctx.font = "bold 50pt Arial";
+	ctx.fillStyle = "black";
+	ctx.fillText("R", 28, 70);
 }
 
 function drawAnchorLines() {
@@ -47,13 +52,15 @@ function drawAnchorLines() {
 	var topLeft 	 = document.getElementById("anchor_line_top_left");
 	var bottomRight = document.getElementById("anchor_line_bottom_right");
 	var container   = document.getElementById("container");
+	var footer      = document.getElementById("footer");
 	var menu			 = document.getElementById("menu");
 
 	topLeft.style.width          = (container.offsetLeft + menu.offsetWidth)+"px";
 	topLeft.style.height         = (anchor.offsetHeight/2 + anchor.offsetTop)+"px";
 	bottomRight.style.marginTop  = (topLeft.offsetHeight-1)+"px";
 	bottomRight.style.marginLeft = (topLeft.offsetWidth-1)+"px";
-	bottomRight.style.height	  = (document.body.offsetHeight-topLeft.offsetHeight)+"px";
+	bottomRight.style.height	  = (document.body.offsetHeight-topLeft.offsetHeight-
+											  footer.offsetHeight)+"px";
 	bottomRight.style.width		  = (document.body.offsetWidth-topLeft.offsetWidth)+"px";
 }
 
