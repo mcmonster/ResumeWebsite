@@ -4,9 +4,15 @@ a.summary {
 	text-decoration:					none;
 }
 
+a.summary_title {
+	/* Font/Text Settings */
+	color:								#AE0000;
+	text-decoration:					none;
+}
+
 h1.summary {
 	/* Font/Text Settings */
-	color:								#008000;
+	color:								#AE0000;
 	font-size:							25px;
 
 	/* Position Settings */

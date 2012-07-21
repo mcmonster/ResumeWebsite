@@ -13,7 +13,7 @@
 					echo $this->Html->link($education['Education']['school_name'],
 												  array('controller' => 'educations',
 												  		  'action' => 'view'),
-												  array('class' => 'summary'));
+												  array('class' => 'summary_title'));
 				?>
 			</h1>
 		</td>

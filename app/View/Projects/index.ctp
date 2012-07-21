@@ -14,7 +14,7 @@
 		      	array('controller' => 'projects',
 							'action' => 'view',
 							$project['Project']['id']),
-					array('class' => 'summary'));										 
+					array('class' => 'summary_title'));	 
 			?>
 			</h1>
 		</td>

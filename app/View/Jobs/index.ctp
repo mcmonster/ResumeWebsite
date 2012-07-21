@@ -9,9 +9,9 @@
 		<td class='summary' colspan='2'>
 			<h1 class='summary'>
 				<?php echo $this->Html->link($job['Job']['employer'],
-													  array('controller' => 'jobs',
-													  		  'action' => 'view'),
-													  array('class' => 'summary')); ?>
+												array('controller' => 'jobs',
+												      'action' => 'view'),
+												array('class' => 'summary_title')); ?>
 			</h1>
 		</td>
 	</tr>

@@ -36,15 +36,15 @@ function drawAnchor() {
 	ctx.arc(xPos, yPos, radius, startAngle, 
 			  endAngle, isCounterClockwise);
 	ctx.lineWidth   = 1;
-	ctx.fillStyle   = "red";
+	ctx.fillStyle   = "#AE0000";
 	ctx.strokeStyle = "black";
 	ctx.fill();
 	ctx.stroke();
 
 	// Draw the R
-	ctx.font = "bold 50pt Arial";
-	ctx.fillStyle = "black";
-	ctx.fillText("R", 28, 70);
+	ctx.font = "bold 60pt Arial";
+	ctx.fillStyle = "white";
+	ctx.fillText("R", 23, 75);
 }
 
 function drawAnchorLines() {
@@ -54,12 +54,13 @@ function drawAnchorLines() {
 	var container   = document.getElementById("container");
 	var footer      = document.getElementById("footer");
 	var menu			 = document.getElementById("menu");
+	var gradient	 = document.getElementById("gradient");
 
 	topLeft.style.width          = (container.offsetLeft + menu.offsetWidth)+"px";
 	topLeft.style.height         = (anchor.offsetHeight/2 + anchor.offsetTop)+"px";
 	bottomRight.style.marginTop  = (topLeft.offsetHeight-1)+"px";
 	bottomRight.style.marginLeft = (topLeft.offsetWidth-1)+"px";
-	bottomRight.style.height	  = (document.body.offsetHeight-topLeft.offsetHeight-
+	bottomRight.style.height	  = (gradient.offsetHeight-topLeft.offsetHeight-
 											  footer.offsetHeight)+"px";
 	bottomRight.style.width		  = (document.body.offsetWidth-topLeft.offsetWidth)+"px";
 }
@@ -70,7 +71,7 @@ function growMenuItem(target) {
 
 	menuItem.style.width        = "130px";
 	menuItemLink.style.fontSize = "20px";
-	menuItemLink.style.color    = "red";
+	menuItemLink.style.color    = "#AE0000";
 }
 
 function shrinkMenuItem(target) {
